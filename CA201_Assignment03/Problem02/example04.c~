@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void f() {
+  int a;
+  {
+    int b;
+    a = 10;
+    {
+      int a;
+      {
+	int c;
+	c = a;
+      }
+      //      a = c;
+    }
+  }
+  //  b = a;
+}
+
+int main(void) {
+}
+/*
+  Expected Output:
+  
+  Errors. 
+  Line:10 "b = a" ==> b is not defined
+*/
